@@ -1,0 +1,41 @@
+<div class="badge-block">
+  <section class="tab" ng-controller="TabController as tab">
+    <h4 class="text-center">Badges Earned</h4>
+    <ul class="nav nav-pills">
+      <li ng-class="{ active: tab.isSet(1) }">
+        <a href class="tw-badge" ng-click="tab.setTab(1)">
+          <span class="icon-member"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+          <p>Member</p>
+        </a>
+      </li>
+      <li ng-class="{ active: tab.isSet(2) }">
+        <a href class="tw-badge" ng-click="tab.setTab(2)">
+          <span class="icon-revolutionary"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+          <p>Revolutionary</p>
+        </a>
+      </li>
+      <li ng-class="{ active: tab.isSet(3) }">
+        <a href class="tw-badge grey" ng-click="tab.setTab(3)">
+          <span class="icon-pioneer"></span>
+          <p>Pioneer</p>
+        </a>
+      </li>
+    </ul>
+    <div class="tab-panel" ng-show="tab.isSet(1)">
+      <p>Your money has helped 11 other people save £154 in bank fees. To say thank you, your next transfer up to £3,000 is on us!</p>
+    </div>
+    <div class="tab-panel" ng-show="tab.isSet(2)">
+      <p>You are so revolutionary!</p>
+    </div>
+    <div class="tab-panel" ng-show="tab.isSet(3)">
+      <p>You are such a pioneer!</p>
+    </div>
+  </section>
+  <footer class="text-center">
+    <h4>My unique invite link</h4>
+    <div class="well well-sm">
+      <a href="#">https://transferwise.com/u/6f63</a>
+    </div>
+    <p class="grey">Copy, paste and send to friends!</p>
+  </footer>
+</div>
